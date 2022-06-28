@@ -18,6 +18,12 @@ services:
     depends_on:
       - rabbitmq
     
+  task_broadcaster:
+    restart: unless-stopped
+    build: ./TaskBroadcaster
+    depends_on:
+      - rabbitmq
+    
   queue_receiver:
     restart: unless-stopped
     build: ./QueueReceiver
@@ -34,3 +40,10 @@ services:
     deploy:
       replicas: 3
       
+  task_receiver:
+    restart: unless-stopped
+    build: ./TaskReceiver
+    depends_on:
+      - rabbitmq
+    deploy:
+      replicas: 3

@@ -8,6 +8,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeBroadcaster", "Exch
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueReceiver", "QueueReceiver\QueueReceiver.csproj", "{3234BA9C-51ED-4A84-AB7C-88D5428FFEB5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskReceiver", "TaskReceiver\TaskReceiver.csproj", "{AE4670D9-695C-43C3-B659-61B6EFD0BD89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskBroadcaster", "TaskBroadcaster\TaskBroadcaster.csproj", "{EFB6821C-7A3E-4AC1-AA8E-929E367A1861}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +34,13 @@ Global
 		{3234BA9C-51ED-4A84-AB7C-88D5428FFEB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3234BA9C-51ED-4A84-AB7C-88D5428FFEB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3234BA9C-51ED-4A84-AB7C-88D5428FFEB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE4670D9-695C-43C3-B659-61B6EFD0BD89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE4670D9-695C-43C3-B659-61B6EFD0BD89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE4670D9-695C-43C3-B659-61B6EFD0BD89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE4670D9-695C-43C3-B659-61B6EFD0BD89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFB6821C-7A3E-4AC1-AA8E-929E367A1861}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFB6821C-7A3E-4AC1-AA8E-929E367A1861}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFB6821C-7A3E-4AC1-AA8E-929E367A1861}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFB6821C-7A3E-4AC1-AA8E-929E367A1861}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

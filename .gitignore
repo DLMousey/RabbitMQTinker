@@ -8,3 +8,5 @@ ExchangeBroadcaster/out/
 ExchangeReceiver/out/
 QueueBroadcaster/out/
 QueueReceiver/out/
+TaskBroadcaster/out/
+TaskReceiver/out/
