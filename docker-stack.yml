@@ -1,0 +1,32 @@
+# BUILD THE IMAGES FIRST
+
+version: "3.9"
+services:
+  rabbitmq:
+    image: rabbitmq:3.8.33-management-alpine
+    ports:
+      - '5672:5672'
+      - '15692:15692'
+
+  queue_broadcaster:
+    image: local-queue-broadcaster:latest 
+    
+  exchange_broadcaster:
+    image: local-exchange-broadcaster:latest
+    
+  queue_receiver:
+    image: local-queue-receiver:latest
+    deploy:
+      replicas: 3
+    
+  exchange_receiver:
+    image: local-exchange-receiver:latest
+    deploy:
+      replicas: 3
+      
+  dozzle:
+    image: amir20/dozzle
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - '8080:8080'

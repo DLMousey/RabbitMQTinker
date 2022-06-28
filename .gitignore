@@ -1,0 +1,10 @@
+bin/
+obj/
+/packages/
+riderModule.iml
+/_ReSharper.Caches/
+.idea/
+ExchangeBroadcaster/out/
+ExchangeReceiver/out/
+QueueBroadcaster/out/
+QueueReceiver/out/

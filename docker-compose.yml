@@ -1,0 +1,36 @@
+version: "3.9"
+services:
+  rabbitmq:
+    image: rabbitmq:3.8.33-management-alpine
+    ports:
+      - '5672:5672'
+      - '15692:15692'
+
+  queue_broadcaster:
+    restart: unless-stopped
+    build: ./QueueBroadcaster
+    depends_on:
+      - rabbitmq
+    
+  exchange_broadcaster:
+    restart: unless-stopped
+    build: ./ExchangeBroadcaster
+    depends_on:
+      - rabbitmq
+    
+  queue_receiver:
+    restart: unless-stopped
+    build: ./QueueReceiver
+    depends_on:
+      - rabbitmq
+    deploy:
+      replicas: 3
+    
+  exchange_receiver:
+    restart: unless-stopped
+    build: ./ExchangeReceiver
+    depends_on:
+      - rabbitmq
+    deploy:
+      replicas: 3
+      
